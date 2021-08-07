@@ -1,0 +1,88 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  overflow: hidden;
+  position: relative;
+}
+
+.background-video {
+  width: 100%;
+  z-index: -1;
+}
+
+.video-overlay {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(36, 36, 33, 0.6);
+  position: absolute;
+  top: 0;
+}
+
+.video-overlay h1 {
+  color: white;
+  font-size: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  text-shadow: 1px 1px 5px black;
+}
+
+.video-overlay input[type="checkbox"] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #dbcfcf;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 2.5rem;
+  -webkit-box-shadow: inset 0px 0px 3px black;
+          box-shadow: inset 0px 0px 3px black;
+  border-radius: 20px;
+  -webkit-transition: background-color 300ms ease-out;
+  transition: background-color 300ms ease-out;
+}
+
+.video-overlay input[type="checkbox"]:checked {
+  background-color: #692ca1;
+}
+
+.video-overlay input[type="checkbox"]::before {
+  content: "";
+  height: 2rem;
+  width: 2rem;
+  background-color: #692ca1;
+  position: absolute;
+  top: 50%;
+  left: 0.2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 3px black;
+          box-shadow: 0px 0px 3px black;
+  -webkit-transition: background-color 300ms ease-out, left 300ms ease-out;
+  transition: background-color 300ms ease-out, left 300ms ease-out;
+}
+
+.video-overlay input[type="checkbox"]:checked::before {
+  content: "";
+  background-color: #dbcfcf;
+  left: 2.8rem;
+}
+/*# sourceMappingURL=style.css.map */
